@@ -49,3 +49,6 @@ CREATE TABLE usuarios (
 );
 SELECT * FROM usuarios
 WHERE nombreUsuario = 'admin' AND claveUsuario = SHA2('Studium2026#', 256);
+
+CREATE USER 'usuarioGestion'@'localhost' IDENTIFIED BY 'Studium2026#';
+GRANT SELECT, INSERT, UPDATE, DELETE ON gestion.* TO 'usuarioGestion'@'localhost';
